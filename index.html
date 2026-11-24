@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>사진관</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>사진관</h1>
+    <p>사진이나 영상을 넣고 효과를 고르세요. 모든 변환은 내 브라우저 안에서만 처리됩니다.</p>
+  </header>
+
+  <main>
+    <section class="stage" id="stage">
+      <div class="drop" id="drop">
+        <p>사진을 여기에 끌어다 놓거나 붙여넣어도 돼요</p>
+        <label class="btn">사진·영상 고르기<input type="file" id="file" accept="image/*,video/*" hidden /></label>
+      </div>
+      <canvas id="view" hidden></canvas>
+      <button class="compare" id="compare" hidden>누르고 있으면 원본</button>
+    </section>
+
+    <aside class="panel">
+      <div class="tabs" id="cats"></div>
+      <div class="presets" id="effects"></div>
+      <div class="sliders" id="sliders"></div>
+      <p class="status" id="status"></p>
+      <div class="actions">
+        <button class="btn ghost" id="reset">초기화</button>
+        <label class="btn ghost">다른 파일<input type="file" id="file2" accept="image/*,video/*" hidden /></label>
+        <button class="btn" id="download" disabled>저장하기</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="effects.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
